@@ -1,3 +1,3 @@
 # Website
 
-this is the code for the offisial gamemodstudios website
+This is the code for the offisial gamemodstudios website.
