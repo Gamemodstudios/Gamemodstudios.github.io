@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="thanks.css">
+    <script>
+        function openEmailTemplate() {
+            var fullName = document.getElementById('fullName').value;
+            var channelName = document.getElementById('channelName').value;
+            var emailAddress = document.getElementById('emailAddress').value;
+
+            var subject = encodeURIComponent("Game mod studios - content creator");
+
+            var body = encodeURIComponent("Hello Game Mod Studios,\n\nMy name is " + fullName +
+                " and I own the channel '" + channelName + "'.\n\nI wanted to reach out regarding working together on a project.\n\n" +
+                "Here are some details:\n\nEmail: " + emailAddress + "\nFull Name: " + fullName + "\nChannel Name: " + channelName +
+                "\n\n Add other important information we need to know below:");
+
+            var mailtoLink = "mailto:gamemodstudios@gmail.com?subject=" + subject + "&body=" + body;
+
+            // Open default email client
+            window.location.href = mailtoLink;
+
+            // Redirect to a thanks page with the provided information
+            var redirectUrl = "thanks.html?fullName=" + encodeURIComponent(fullName) + "&channelName=" + encodeURIComponent(channelName) + "&email=" + encodeURIComponent(emailAddress);
+            window.location.href = redirectUrl;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Form</h1>
+        <form>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="channelName">Channel Name:</label>
+            <input type="text" id="channelName" name="channelName" required>
+
+            <label for="emailAddress">Email Address:</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+
+            <button class="button" type="button" onclick="openEmailTemplate()">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <h6><a href="/Policys/copyright.html" style="color: white;">&copy; 2023 Game Mod Studios. All rights reserved.</a></h6>
+    </footer>
+</body>
+</html>

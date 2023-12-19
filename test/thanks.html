@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Game Mod Studios</title>
+    <link rel="stylesheet" href="thanks.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Thank You!</h1>
+    <p>Thank you, <span id="fullName"></span>, for reaching out!</p>
+    <p>We appreciate your interest in working together on your channel: <span id="channelName"></span>.</p>
+
+    <p>We'll get in touch with you soon. If you have any immediate questions, you can reach us at <a href="mailto:gamemodstudios+support@gmail.com">gamemodstudios+support@gmail.com</a>.</p>
+</div>
+
+<footer>
+    <h6><a href="/Policies/copyright.html" style="color: white;">&copy; 2023 Game Mod Studios. All rights reserved.</a></h6>
+</footer>
+
+<script>
+    // Function to extract query parameters from the URL
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return null;
+    }
+
+    // Retrieve and display information from query parameters
+    var fullName = getQueryVariable("fullName");
+    var channelName = getQueryVariable("channelName");
+
+    document.getElementById("fullName").innerText = fullName;
+    document.getElementById("channelName").innerText = channelName;
+</script>
+
+</body>
+</html>
