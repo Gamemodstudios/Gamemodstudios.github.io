@@ -1,6 +1,6 @@
 # GameModStudios Official Website
 
-Welcome to the official website of GameModStudios! You can visit our website at [https://game-mods-studio.github.io/](https://game-mods-studio.github.io/).
+Welcome to the code of the official website of GameModStudios! You can visit our website at [https://game-mods-studio.github.io/](https://game-mods-studio.github.io/).
 
 ## Contribution and Development
 
