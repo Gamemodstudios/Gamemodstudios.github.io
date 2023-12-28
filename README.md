@@ -1,6 +1,13 @@
-# Website
+# GameModStudios Official Website
 
-This is the code for the offisial gamemodstudios website.
-https://game-mods-studio.github.io/
+Welcome to the official website of GameModStudios! You can visit our website at [https://game-mods-studio.github.io/](https://game-mods-studio.github.io/).
 
-if you want to help with the developnet of our webstite (curently are we unable to resev help with the development of our website)
+## Contribution and Development
+
+We appreciate your interest in contributing to the development of our website. Unfortunately, at the moment, we are unable to accept external contributions. However, we value your enthusiasm and support.
+
+If you have any suggestions, feedback, or inquiries, feel free to reach out to us. We are constantly working to improve our website and enhance the user experience.
+
+Thank you for your understanding and continued support.
+
+Happy gaming!
