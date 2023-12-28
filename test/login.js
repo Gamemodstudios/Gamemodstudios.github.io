@@ -48,8 +48,9 @@ if (authToken) {
         const newAuthToken = generateAuthToken();
         setCookie("authToken", newAuthToken, 7); // Set cookie with a 7-day expiration
     } else {
-        console.log("Incorrect username or password. Access denied.");
+        console.log("Incorrect username or password. Access denied. redirecting");
+        alert("Incorrect username or password. Access denied.")
         setCookie("authToken", "", -1); // Expire the cookie immediately
-        window.location.href = "http://gamemodstudios.servehttp.com"; // Replace with your desired website URL
+        window.location.href = "https://game-mods-studio.github.io/"; // Replace with your desired website URL
     }
 }
