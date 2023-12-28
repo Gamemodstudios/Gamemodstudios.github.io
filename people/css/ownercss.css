@@ -32,9 +32,22 @@ body {
 }
 
 .social-links a {
+    display: block;
+    margin-top: 10px;
+}
+
+.social-links a {
     background-color: #3498db;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the menu appears above other elements */
 }
