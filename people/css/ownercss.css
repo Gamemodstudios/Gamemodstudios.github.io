@@ -88,7 +88,8 @@ body {
 .highlight {
     background-color: #3498db;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Adjusted padding for more space */
     border-radius: 5px;
     display: inline-block;
+    margin: 10px; /* Added margin for separation */
 }
