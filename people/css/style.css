@@ -24,7 +24,14 @@ a:link {
     text-decoration: underline;
   }
   
-  
+  .highlight {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px; /* Adjusted padding for more space */
+    border-radius: 5px;
+    display: inline-block;
+    margin: 1px; /* Added margin for separation */
+}
   
   * {
     box-sizing: border-box;
