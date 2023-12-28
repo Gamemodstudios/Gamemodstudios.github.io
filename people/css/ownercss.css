@@ -44,10 +44,51 @@ body {
     display: inline-block;
 }
 
-.hamburger-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100px; /* Adjust this value to set the distance from the right side */
+    padding: 10px; /* Add padding for better appearance */
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu-toggle {
     cursor: pointer;
-    z-index: 1000; /* Ensure the menu appears above other elements */
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.highlight {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
