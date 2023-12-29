@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamemodstudios website developers</title>
+    <link rel="stylesheet" href="css/(cssname).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="people_homepage.html" class="highlight">Back</a></li>
+            <li><a href="/index.html" class="highlight">Home</a></li>
+            <li><a href="/mods.html" class="highlight">Mods</a></li>
+            <li><a href="/contact.html" class="highlight">Contact</a></li>
+            <li><a href="/wikis/wiki_homepage.html" class="highlight">Wikis</a></li>
+            <li><a href="/about.html" class="highlight">About</a></li>
+            <li><a href="/jobs.html" class="highlight">Jobs</a></li>
+            <li><a href="/support.html" class="highlight">Support</a></li>
+        </ul>
+        </div>
+    <div class="container">
+        <div class="header">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <h1>The website developers:</h1>
+        </div>
+
+    <div class="team-member">
+        <img class="avatar" src="(link to avatar)" alt="No image">
+        <h2>(name of persion)</h2>
+        <p><strong>Position:</strong>Position</p>
+        <p><strong>Description:</strong>Description</p>
+
+        <div class="social-links">
+            <a href="(social link1)" target="_blank">name</a>
+            <a href="(social link2)" target="_blank">name</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
