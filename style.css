@@ -1,8 +1,3 @@
-
-
-
-
-
 /*links*/
 a:link {
   color: black;
@@ -45,8 +40,8 @@ body {
 .header {
   padding: 90px;
   text-align: center;
-  background: aqua;
   color: white;
+  background-color: aqua;
 }
 
 /* Increase the font size of the heading */
