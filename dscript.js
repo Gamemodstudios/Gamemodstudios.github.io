@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerProfileImageElement = document.getElementById('header-profile-pic');
     const sidebarProfileImageElement = document.querySelector('.sidebar-profile-pic');
     const usernameElement = document.getElementById('username');
+    const loginButtonElement = document.getElementById('login-button');
+    const sidebarElement = document.getElementById('sidebar');
 
     console.log("headerProfileImageElement:", headerProfileImageElement);
     console.log("sidebarProfileImageElement:", sidebarProfileImageElement);
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const storage = firebase.storage();
 
                 // Load header profile picture
-                const headerProfileImageRef = storage.ref().child(`profile-images/${user.uid}`);
+                const headerProfileImageRef = storage.ref().child(`profile-pic/${user.uid}/${user.uid}.png`);
                 headerProfileImageRef.getDownloadURL().then(url => {
                     if (headerProfileImageElement) {
                         headerProfileImageElement.src = url;
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 // Load sidebar profile picture
-                const sidebarProfileImageRef = storage.ref().child(`profile-images/${user.uid}`);
+                const sidebarProfileImageRef = storage.ref().child(`profile-pic/${user.uid}/${user.uid}.png`);
                 sidebarProfileImageRef.getDownloadURL().then(url => {
                     if (sidebarProfileImageElement) {
                         sidebarProfileImageElement.src = url;
@@ -59,33 +61,78 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).catch(error => {
                     console.error("Error fetching sidebar profile image:", error);
                 });
+
+                // Show the sidebar only if the user is signed in
+                if (sidebarElement) {
+                    sidebarElement.style.right = "-300px";
+                }
+
+                // Hide the login button
+                if (loginButtonElement) {
+                    loginButtonElement.style.display = "none";
+                }
             } else {
                 console.error("Username element not found.");
             }
         } else {
             // User is signed out
             console.log("User is signed out");
-            // Redirect to login or handle as needed
+
+            // Hide the sidebar if the user is signed out
+            if (sidebarElement) {
+                sidebarElement.style.right = "0";
+            }
+
+            // Show the login button
+            if (loginButtonElement) {
+                loginButtonElement.style.display = "block";
+            }
         }
     });
 
     // Add click event listener to the header profile picture
     if (headerProfileImageElement) {
-        headerProfileImageElement.addEventListener('click', function() {
+        headerProfileImageElement.addEventListener('click', function () {
             console.log("Header profile picture clicked");
-            toggleSidebar();
+            openSidebar(); // Use a separate function to open the sidebar
         });
     }
 });
+
+function openSidebar() {
+    const sidebarElement = document.getElementById('sidebar');
+    if (sidebarElement) {
+        sidebarElement.style.right = "0";
+    }
+}
 
 function toggleSidebar() {
     const sidebarElement = document.getElementById('sidebar');
     if (sidebarElement) {
         const rightValue = window.getComputedStyle(sidebarElement).getPropertyValue('right');
-        if (rightValue === "0px") {
-            sidebarElement.style.right = "-300px";
+        if (rightValue !== "0px") {
+            openSidebar(); // Open the sidebar only when needed
         } else {
-            sidebarElement.style.right = "0";
+            sidebarElement.style.right = "-300px";
         }
     }
+}
+
+
+function login() {
+    // Implement your login functionality here
+    console.log("Login button clicked");
+    // Redirect to login.html
+    window.location.href = 'loginpage/login.html';
+}
+
+function signOut() {
+    const auth = firebase.auth();
+    auth.signOut().then(function () {
+        console.log("User signed out");
+        // Redirect to index.html after sign-out
+        window.location.href = 'index.html';
+    }).catch(function (error) {
+        console.error("Error signing out:", error);
+    });
 }

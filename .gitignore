@@ -1,1 +1,7 @@
-IP ADDRESES.txt
+# ignore ALL .log files
+*.log
+*.temp
+
+# ignore ALL files in ANY directory named temp
+temp/
+.vscode/

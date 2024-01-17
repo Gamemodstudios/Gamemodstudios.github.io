@@ -1,0 +1,30 @@
+<!-- Content specific to Profile Settings -->
+<section class="category">
+    <h2>Profile Settings</h2>
+    <ul>
+        <li><a href="#">Profile Information</a></li>
+        <li><a href="#">Visibility</a></li>
+        <!-- Add more options under Profile Settings -->
+    </ul>
+</section>
+
+
+<!-- Content specific to Change Profile Picture -->
+<section class="category">
+    <h2>Change Profile Picture</h2>
+    <form id="profile-pic-form">
+        <label for="new-profile-pic">Upload new profile picture:</label>
+        <input type="file" accept="image/*" id="new-profile-pic" name="new-profile-pic" required>
+        <button type="button" onclick="uploadProfilePic()">Upload</button>
+    </form>
+
+    <p id="upload-status"></p>
+</section>
+
+<!-- Include Firebase SDK scripts here -->
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+
+<!-- Include your script.js file -->
+<script src="script.js"></script>

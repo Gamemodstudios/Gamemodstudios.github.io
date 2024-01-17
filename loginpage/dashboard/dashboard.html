@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <button id="login-button" onclick="login()">Login</button>
         <img src="" alt="Profile Picture" id="header-profile-pic" onclick="toggleSidebar()">
     </header>
 
@@ -21,15 +22,21 @@
         </div>
         <ul class="sidebar-options">
             <li><a href="/index.html">Home</a></li>
-            <li style="display: none;"><a href="#">Option 2</a></li>
+            <li><a href="">Settings</a></li>
             <li style="display: none;"><a href="#">Option 3</a></li>
+            <li><button onclick="signOut()">Sign Out</button></li>
             <!-- Add more options as needed -->
         </ul>
     </div>
 
+    <div class="sidebar-bottom">
+        
+    </div>
+
     <div class="content">
         <!-- Main content goes here -->
-        <p>Main content goes here.</p>
+        <h1>This is still under development</h1>
+        <a href="/loginpage/setings/index.html">setings</a>
     </div>
 
     <!-- Include Firebase SDK scripts here -->
@@ -39,5 +46,6 @@
 
     <!-- Include your script.js file -->
     <script src="script.js"></script>
+
 </body>
 </html>

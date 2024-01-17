@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <header>
+    <button id="login-button" onclick="login()">Login</button>
+    <img src="" alt="Profile Picture" id="header-profile-pic" onclick="toggleSidebar()">
+</header>
+<head>
 <title>Game mod studios</title>
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-
-
-
-
-
-    <head>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7142142063790394"
      crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/601675ef74.js" crossorigin="anonymous"></script>
@@ -25,12 +22,15 @@
             <a href="mods.html">Mods</a>
             <a href="contact.html">Contact</a>
             <a href="wikis/wiki_homepage.html">Wikis</a>
-            <a href="loginpage/login.html" class="right" style="text-decoration: white;">Login</a>
             <a href="jobs.html" class="right active">Jobs</a>
             <a href="about.html" class="right">About</a>
             <a href="people/people_homepage.html">People</a>
         </div>
+      </head>
         <body>
+
+
+
             <h2>Open jobs</h2>
             <h1>NOTE! There are currently no open jobs at gamemodstudios</h1>
             <p>If you want to work with us, follow the instructions in the job description</p>
@@ -136,6 +136,37 @@ a i{
 
 
 
+              <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+              <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <img src="" alt="Profile Picture" class="sidebar-profile-pic">
+                    <p class="sidebar-username" id="username"></p>
+                    <span class="close-btn" onclick="toggleSidebar()">X</span>
+                </div>
+                <ul class="sidebar-options">
+                  <li><a href="loginpage/dashboard/dashboard.html">Dashboard</a></li>
+                  <li style="display: none;"><a href="/loginpage/setings/index.html">Settings</a></li>
+                    <li style="display: none;"><a href="#">Option 3</a></li>
+                    <li><button onclick="signOut()">Sign Out</button></li>
+                    <!-- Add more options as needed -->
+                </ul>
+            </div>
+        
+        
+        
+            <!-- Include Firebase SDK scripts here -->
+            <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+        
+            <!-- Include your script.js file -->
+            <script src="dscript.js"></script>
+            <link rel="stylesheet" href="dstyles.css">
+
+
+
+
+
     </body>
-  </head>
 </html>
