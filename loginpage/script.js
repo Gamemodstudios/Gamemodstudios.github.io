@@ -60,7 +60,7 @@ createacctbtn.addEventListener("click", function() {
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      window.location.replace("dashboard/dashboard.html");
+      window.location.replace("dashboard/");
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -81,7 +81,7 @@ submitButton.addEventListener("click", function() {
       const user = userCredential.user;
       console.log("Success! Welcome back!");
       document.cookie = "autenticated=true; path=/";
-      window.location.replace("dashboard/dashboard.html");
+      window.location.replace("dashboard/");
       // ...
     })
     .catch((error) => {
