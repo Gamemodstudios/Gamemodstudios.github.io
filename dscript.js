@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }).catch(error => {
                     console.error("Error fetching header profile image:", error);
+                    alert("Error fetching header profile image:", error);
                 });
 
                 // Load sidebar profile picture
