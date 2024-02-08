@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("headerProfileImageElement:", headerProfileImageElement);
     console.log("sidebarProfileImageElement:", sidebarProfileImageElement);
 
+    // Placeholder image URL
+    const placeholderImageUrl = 'placeholder.jpg';
+
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
         apiKey: "AIzaSyD-qQH3vlQVlBIriPdpAjmG5uUnpWaOlCI",
@@ -48,7 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }).catch(error => {
                     console.error("Error fetching header profile image:", error);
-                    alert("Error fetching header profile image:", error);
+                    // If profile picture not found, use placeholder image
+                    headerProfileImageElement.src = placeholderImageUrl;
                 });
 
                 // Load sidebar profile picture
@@ -61,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }).catch(error => {
                     console.error("Error fetching sidebar profile image:", error);
+                    // If profile picture not found, use placeholder image
+                    sidebarProfileImageElement.src = placeholderImageUrl;
                 });
 
                 // Show the sidebar only if the user is signed in
@@ -118,7 +124,6 @@ function toggleSidebar() {
         }
     }
 }
-
 
 function login() {
     // Implement your login functionality here
