@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("DOM is loaded");
 
     const headerProfileImageElement = document.getElementById('header-profile-pic');
     const sidebarProfileImageElement = document.querySelector('.sidebar-profile-pic');
@@ -7,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginButtonElement = document.getElementById('login-button');
     const sidebarElement = document.getElementById('sidebar');
 
-    console.log("headerProfileImageElement:", headerProfileImageElement);
-    console.log("sidebarProfileImageElement:", sidebarProfileImageElement);
+console.clear
 
     // Placeholder image URL
     const placeholderImageUrl = 'placeholder.jpg';
