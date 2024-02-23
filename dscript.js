@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginButtonElement = document.getElementById('login-button');
     const sidebarElement = document.getElementById('sidebar');
 
-console.clear
+
 
     // Placeholder image URL
     const placeholderImageUrl = 'placeholder.jpg';
