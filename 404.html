@@ -38,6 +38,39 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Style for the dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%; /* Fill out the entire available width */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1f1f1f;
+            width: 100%; /* Fill out the entire available width */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content p {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+        }
+
+        .dropdown-content p:hover {
+            background-color: #353535;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -46,5 +79,36 @@
         <p>Oh no! It looks like you've hit a game over screen.</p>
         <p>Don't worry, respawn at <a href="/">the homepage</a> and continue your adventure!</p>
     </div>
+    <div class="more info">
+        <!-- Dropdown with more information -->
+        <div class="dropdown">
+            <button class="dropbtn" id="moreInfoBtn">More Information</button>
+            <div class="dropdown-content" id="moreInfoContent">
+                <p>You've encountered a 404 error because the page you were trying to reach could not be found.</p>
+                <p>This could be due to:</p>
+                <ul>
+                    <li>A mistyped URL</li>
+                    <li>An outdated or broken link</li>
+                    <li>A page that has been moved or deleted</li>
+                </ul>
+                <p>To get back on track, you can:</p>
+                <ul>
+                    <li>Return to the <a href="/">homepage</a></li>
+                    <li>Contact the website administrator for further assistance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("moreInfoBtn").addEventListener("click", function() {
+            var dropdownContent = document.getElementById("moreInfoContent");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    </script>
 </body>
 </html>
