@@ -1,3 +1,5 @@
 {
-    "Standard simulation rate" : "30"
+    "Standard simulation rate" : "30",
+    "bounce" : "20",
+    "friction" : "50"
 }
