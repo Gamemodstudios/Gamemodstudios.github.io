@@ -1,3 +1,4 @@
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dpws.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 # GameModStudios Official Website
 
 Welcome to the code of the official website of GameModStudios! You can visit our website at [https://game-mods-studio.github.io/](https://game-mods-studio.github.io/).
