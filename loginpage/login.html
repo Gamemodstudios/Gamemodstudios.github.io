@@ -53,7 +53,30 @@
                 <button id = "return-btn">Return to Login</button>  
                 
         </div>
-        <a href="/" class="highlight">Back</a>
+<script>
+  // Get the referrer URL
+  const referrer = document.referrer;
+
+  // Parse the referrer URL to extract the query parameter
+  const urlParams = new URLSearchParams(new URL(referrer).search);
+  const origin = urlParams.get('Origin');
+
+  // Function to handle the redirection
+  function handleRedirect() {
+    // Redirect back to the origin URL if it exists, otherwise redirect to the default URL
+    if (origin) {
+      window.location.href = origin;
+    } else {
+      window.location.href = 'http://localhost:5501'; // Replace with your default URL
+    }
+  }
+
+  // Add event listener to the "Back" button
+  const backButton = document.querySelector('.highlight');
+  backButton.addEventListener('click', handleRedirect);
+</script>
+
+<a href="/" class="highlight">Back</a>
     </div>
 </body>
 <script type = "module" src = "script.js"></script>

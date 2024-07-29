@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Placeholder image URL
-    const placeholderImageUrl = 'placeholder.jpg';
+    const placeholderImageUrl = people/avatars/placeholder.jpg;
 
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -127,7 +127,7 @@ function login() {
     // Implement your login functionality here
     console.log("Login button clicked");
     // Redirect to login.html
-    window.location.href = 'loginpage/login.html';
+    window.location.href = 'loginpage/login.html?Origin='+ window.origin;
 }
 
 function signOut() {
