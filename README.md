@@ -5,9 +5,9 @@ Welcome to the code of the official website of GameModStudios! You can visit our
 
 ## Contribution and Development
 
-We appreciate your interest in contributing to the development of our website. Unfortunately, at the moment, we are unable to accept external contributions. However, we value your enthusiasm and support.
+We appreciate your interest in contributing to the development of our website. Unfortunately, we are unable to accept external contributions at the moment. However, we value your enthusiasm and support.
 
-If you have any suggestions, feedback, or inquiries, feel free to reach out to us. [Create a new GitHub issue](https://github.com/game-mods-studio/game-mods-studio/issues/new?assignees=&labels=security&template=security-vulnerability-report.md&title=) We are constantly working to improve our website and enhance the user experience.
+If you have any suggestions, feedback, or inquiries, feel free to contact us. [Create a new GitHub issue]([[https://github.com/Gamemodstudios/Gamemodstudios](https://github.com/Gamemodstudios/Gamemodstudios.github.io)](https://github.com/Gamemodstudios/Gamemodstudios.github.io)/issues/new?assignees=&labels=security&template=security-vulnerability-report.md&title=) We are constantly working to improve our website and enhance the user experience.
 
 Thank you for your understanding and continued support.
 
