@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { GetUser } from '@/utils/ran/getUser';
 
 interface UserMetadata {
   profile_picture?: string; // Made optional
@@ -92,19 +91,6 @@ const Navbar: React.FC = () => {
   const [user, setUser] = useState<AuthUser | null>(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const response: GetUserResponse = await GetUser();
-      if (response.data && response.data.user) {
-        setUser(response.data.user);
-      } else {
-        setUser(null);
-      }
-    };
-
-    fetchUser();
-  }, []);
-
   const navigateToGamemodstudios = () => {
     window.location.href = '/';
   };
@@ -120,7 +106,7 @@ const Navbar: React.FC = () => {
   // const redirectUrl = `http://localhost:3001/auth/login?redirect_uri=${window.location.origin}${pathname}/callback`;
 
   // Provide a default profile picture if user.user_metadata.profile_picture is undefined
-  const profilePictureSrc = user?.user_metadata?.profile_picture || '/default-profile-pic.webp';
+  // const profilePictureSrc = user?.user_metadata?.profile_picture || '/default-profile-pic.webp';
 
 
   return (
