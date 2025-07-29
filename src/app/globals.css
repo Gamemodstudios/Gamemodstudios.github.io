@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-welcome-content-bg: #23272f;
+  --color-card-bg: #333;
+  --color-footer-bg: #333;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-text h1 {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.hero-text p {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.fa-brands {
+  margin: 0 0.5rem; /* Direct CSS equivalent of mx-2 */
+}
