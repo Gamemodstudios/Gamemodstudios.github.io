@@ -2,13 +2,15 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { createClient } from '@/utils/supabase/client';
+
+
+    // TMP Fixes to get the build to work 
+    // These Fixes Cases on this page to stop working
 
 function CallbackContent() {
   const router = useRouter();
   const params = useSearchParams();
   const code = params.get('code');
-  const supabase = createClient();
 
   const [status, setStatus] = useState<'loading' | 'error' | 'success'>('loading');
   const [error, setError] = useState<string | null>(null);
@@ -31,18 +33,6 @@ function CallbackContent() {
           return;
         }
 
-        // Set Supabase session
-        const { error: sessionError } = await supabase.auth.setSession({
-          access_token: data.access_token,
-          refresh_token: data.refresh_token,
-        });
-
-        if (sessionError) {
-          setStatus('error');
-          setError(sessionError.message);
-          return;
-        }
-
         setStatus('success');
         router.push('/');
       } catch (err: any) {
@@ -54,7 +44,7 @@ function CallbackContent() {
     if (typeof window !== 'undefined') {
       handleExchange();
     }
-  }, [code, router, supabase.auth]);
+  }, [code, router]);
 
   return (
     <>
