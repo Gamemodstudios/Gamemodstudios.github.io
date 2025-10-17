@@ -185,7 +185,7 @@ export default function Home() {
         "A Minecraft mod that gives you op tools and armor that almost makes you a god.",
       discoverLink: { href: "https://modrinth.com/mod/op_tools", ariaLabel: "Read About Op-Tools Mod", external: true },
       installLink: { href: "https://modrinth.com/mod/op_tools#download", ariaLabel: "Install Op-Tools Mod", external: true },
-      labels: [{ text: "Mod", type: "mod" }, { text: "Minecraft", type: "default" }, { text: "featured", type: "featured" }],
+      labels: [{ text: "Mod", type: "mod" }, { text: "Minecraft", type: "default" }, { text: "Featured", type: "featured" }],
     },
     {
       imageSrc: "/images/games/Quantum_transit.webp",
