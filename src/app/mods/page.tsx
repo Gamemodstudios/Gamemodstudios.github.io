@@ -5,7 +5,7 @@ export default function ModsPage() {
   return (
     <div>
       <Navbar />
-      <h1>Mods Page</h1>
+      <h1 className="items-center">Mods Page</h1>
       <p>Welcome to the mods section!</p>
       <Footer />
     </div>
