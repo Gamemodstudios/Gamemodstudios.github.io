@@ -1,4 +1,6 @@
 name: Deploy Gamemodstudios Website to GitHub Pages
+permissions:
+  contents: write
 
 on:
   push:
